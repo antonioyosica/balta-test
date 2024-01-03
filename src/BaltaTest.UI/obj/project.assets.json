@@ -2,6 +2,44 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "DotNetTools/0.0.2": {
+        "type": "package",
+        "dependencies": {
+          "ExcelAbstraction.NPOI": "0.0.1"
+        },
+        "compile": {
+          "lib/net40/DotNetTools.dll": {
+            "related": ".XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/DotNetTools.dll": {
+            "related": ".XML"
+          }
+        }
+      },
+      "ExcelAbstraction/0.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/ExcelAbstraction.dll": {}
+        },
+        "runtime": {
+          "lib/ExcelAbstraction.dll": {}
+        }
+      },
+      "ExcelAbstraction.NPOI/0.0.1": {
+        "type": "package",
+        "dependencies": {
+          "ExcelAbstraction": "0.0.1",
+          "NPOI": "2.0.6"
+        },
+        "compile": {
+          "lib/ExcelAbstraction.NPOI.dll": {}
+        },
+        "runtime": {
+          "lib/ExcelAbstraction.NPOI.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -529,6 +567,47 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "NPOI/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/net40/ICSharpCode.SharpZipLib.dll": {},
+          "lib/net40/NPOI.OOXML.dll": {
+            "related": ".XML"
+          },
+          "lib/net40/NPOI.OpenXml4Net.dll": {
+            "related": ".XML"
+          },
+          "lib/net40/NPOI.OpenXmlFormats.dll": {},
+          "lib/net40/NPOI.dll": {
+            "related": ".OOXML.XML;.OpenXml4Net.XML;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net40/ICSharpCode.SharpZipLib.dll": {},
+          "lib/net40/NPOI.OOXML.dll": {
+            "related": ".XML"
+          },
+          "lib/net40/NPOI.OpenXml4Net.dll": {
+            "related": ".XML"
+          },
+          "lib/net40/NPOI.OpenXmlFormats.dll": {},
+          "lib/net40/NPOI.dll": {
+            "related": ".OOXML.XML;.OpenXml4Net.XML;.XML"
+          }
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -736,6 +815,43 @@
     }
   },
   "libraries": {
+    "DotNetTools/0.0.2": {
+      "sha512": "jKNx/tlFFbGi1x284Ozu/RrN6SZh7aT93TJnHvy32qwGA2rpkO3P4b5D9AU0eTkRtdqbx5DLrBSi/xrCSOMpXA==",
+      "type": "package",
+      "path": "dotnettools/0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnettools.0.0.2.nupkg.sha512",
+        "dotnettools.nuspec",
+        "lib/net40/DotNetTools.XML",
+        "lib/net40/DotNetTools.dll"
+      ]
+    },
+    "ExcelAbstraction/0.0.1": {
+      "sha512": "II7rZQBVifd8gPfE2WFXaapmMcjYBAJMLfwOyNbMCb3DP0l47mpS6qJS1aThNHjA1PAGEHho1L4GfpqRUblbVw==",
+      "type": "package",
+      "path": "excelabstraction/0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "excelabstraction.0.0.1.nupkg.sha512",
+        "excelabstraction.nuspec",
+        "lib/ExcelAbstraction.dll"
+      ]
+    },
+    "ExcelAbstraction.NPOI/0.0.1": {
+      "sha512": "0vGczI2VmZXB0P6TWGB/c5T2Df6OK3EcAZ6SlujejHZhx2lOFwunaesQ8Y+WjzyBIPDbM0ZvUqgxmW/88mx5hA==",
+      "type": "package",
+      "path": "excelabstraction.npoi/0.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "excelabstraction.npoi.0.0.1.nupkg.sha512",
+        "excelabstraction.npoi.nuspec",
+        "lib/ExcelAbstraction.NPOI.dll"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1503,6 +1619,55 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "NPOI/2.0.6": {
+      "sha512": "207XIbT5FikKQHP0UlqRMT/7raSjWDLydg5e1MgNmP2JWPW2SrIdChaAlK7b/hoWwm5CiWVjtsNLqD2O5QKLIw==",
+      "type": "package",
+      "path": "npoi/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "Read Me.txt",
+        "Release Notes.txt",
+        "lib/net20/ICSharpCode.SharpZipLib.dll",
+        "lib/net20/NPOI.OOXML.XML",
+        "lib/net20/NPOI.OOXML.dll",
+        "lib/net20/NPOI.OpenXml4Net.XML",
+        "lib/net20/NPOI.OpenXml4Net.dll",
+        "lib/net20/NPOI.OpenXmlFormats.dll",
+        "lib/net20/NPOI.XML",
+        "lib/net20/NPOI.dll",
+        "lib/net40/ICSharpCode.SharpZipLib.dll",
+        "lib/net40/NPOI.OOXML.XML",
+        "lib/net40/NPOI.OOXML.dll",
+        "lib/net40/NPOI.OpenXml4Net.XML",
+        "lib/net40/NPOI.OpenXml4Net.dll",
+        "lib/net40/NPOI.OpenXmlFormats.dll",
+        "lib/net40/NPOI.XML",
+        "lib/net40/NPOI.dll",
+        "logo/120_120.jpg",
+        "logo/240_240.png",
+        "logo/32_32.jpg",
+        "logo/60_60.jpg",
+        "npoi.2.0.6.nupkg.sha512",
+        "npoi.nuspec"
+      ]
+    },
+    "SharpZipLib/0.86.0": {
+      "sha512": "5DbS1SlKLMi+WG00Cm0ueYf2oyXJrowETQk8nx96rmdjTuHsA3laPykGV7Sxi0R5Xxfx0Kh/EfacAZ1f6M7y/g==",
+      "type": "package",
+      "path": "sharpziplib/0.86.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/11/ICSharpCode.SharpZipLib.dll",
+        "lib/20/ICSharpCode.SharpZipLib.dll",
+        "lib/SL3/SharpZipLib.Silverlight3.dll",
+        "lib/SL4/SharpZipLib.Silverlight4.dll",
+        "sharpziplib.0.86.0.nupkg.sha512",
+        "sharpziplib.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
       "sha512": "EWI1olKDjFEBMJu0+3wuxwziIAdWDVMYLhuZ3Qs84rrz+DHwD00RzWPZCa+bLnHCf3oJwuFZIRsHT5p236QXww==",
       "type": "package",
@@ -1740,6 +1905,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DotNetTools >= 0.0.2",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.10",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.10",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.10",
@@ -1786,6 +1952,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "DotNetTools": {
+            "target": "Package",
+            "version": "[0.0.2, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.10, )"
@@ -1818,6 +1988,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1826,8 +2014,60 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DotNetTools 0.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DotNetTools",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ExcelAbstraction 0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ExcelAbstraction",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ExcelAbstraction.NPOI 0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ExcelAbstraction.NPOI",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NPOI 2.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NPOI",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpZipLib",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
